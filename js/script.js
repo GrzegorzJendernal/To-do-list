@@ -21,6 +21,7 @@
 
     const toggleTaskDone = (taskIndex) => {
         tasks[taskIndex].done = !tasks[taskIndex].done;
+
         render();
     }
 
@@ -76,6 +77,7 @@
         };
 
         addNewTask(newTaskContent);
+
         resetInput(inputElement);
     };
 
