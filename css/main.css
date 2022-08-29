@@ -3,3 +3,17 @@
     max-width: 1000px;
     padding: 20px;
 }
+
+.main__section {
+    background-color: #ffffff;
+}
+
+.main__section--bottom {
+    padding-bottom: 20px;
+}
+
+.main__subheader {
+    padding: 20px;
+    border-bottom: solid 2px #ededed;
+    margin: 0px;
+}
