@@ -78,6 +78,7 @@
         };
 
         addNewTask(newTaskContent);
+        resetInput(inputElement);
     };
 
     const init = () => {
