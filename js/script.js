@@ -73,12 +73,11 @@
         const inputElement = document.querySelector(".js-newTask");
 
         if (newTaskContent === "") {
+            resetInput(inputElement);
             return;
         };
 
         addNewTask(newTaskContent);
-
-        resetInput(inputElement);
     };
 
     const init = () => {
