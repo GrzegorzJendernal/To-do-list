@@ -16,7 +16,11 @@ Hello! You can create a to-do list and mark the tasks you have already done.
 
 - when task is done click on green button,
 
-- if you want delete a task, click red button.
+- if you want delete a task, click red button,
+
+- click on "Ukończ wszystkie" to mark all tasks as done,
+
+- you can hide and show again completed tasks with the button "Ukryj/Pokaż ukończone".
 
 ##  Technologies
 
