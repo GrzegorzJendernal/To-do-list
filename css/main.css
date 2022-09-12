@@ -17,3 +17,8 @@
     border-bottom: solid 2px #ededed;
     margin: 0px;
 }
+
+.main__subheader--botton {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
