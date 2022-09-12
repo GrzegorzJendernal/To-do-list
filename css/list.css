@@ -26,6 +26,7 @@
     background-color: #218b21;
     color: white;
     border: 0px;
+    cursor: pointer;
 }
 
 .list__button--remove {
