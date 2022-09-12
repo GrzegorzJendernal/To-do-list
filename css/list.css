@@ -32,6 +32,16 @@
     background-color: #db133c;
 }
 
+.list__button--remove:hover {
+    background-color: hsl(348, 84%, 57%);
+    transition: 1s;
+}
+
+.list__button--done:hover {
+    background-color: hsl(120, 62%, 44%);
+    transition: 1s;
+}
+
 .list__button:active {
     outline: solid 2px #000000
 }

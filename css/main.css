@@ -18,7 +18,36 @@
     margin: 0px;
 }
 
-.main__subheader--botton {
+.main__subheader--bottom {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr auto auto;
+}
+
+@media (max-width: 767px) {
+    .main__subheader--bottom {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+}
+
+.main__button {
+    border: none;
+    color: hsl(180, 100%, 25%);
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.main__button:hover {
+    color: hsl(180, 100%, 35%);
+    transition: 1s;
+}
+
+.main__button:active {
+    outline: solid 2px #000000;
+    color: hsl(180, 100%, 45%);
+}
+
+.main__button:disabled {
+    color: hsl(0, 0%, 70%);
 }

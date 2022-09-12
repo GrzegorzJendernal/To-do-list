@@ -17,6 +17,12 @@
     border: 0px;
 }
 
+.form__button:hover {
+    background-color: hsl(180, 100%, 35%);
+    transition: 1s;
+    transform: scale(1.15);
+}
+
 .form__button:active {
     outline: solid 2px #000000
 }
