@@ -23,12 +23,9 @@
     grid-template-columns: 1fr auto auto;
 }
 
-@media (max-width: 767px) {
-    .main__subheader--bottom {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-gap: 10px;
-    }
+.main__buttons {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .main__button {
@@ -37,6 +34,7 @@
     font-size: 17px;
     background-color: transparent;
     cursor: pointer;
+    margin: 10px;
 }
 
 .main__button:hover {
@@ -51,4 +49,17 @@
 
 .main__button:disabled {
     color: hsl(0, 0%, 70%);
+}
+
+@media (max-width: 767px) {
+    .main__subheader--bottom {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+
+    .main__button {
+        flex-basis: 100%;
+        justify-content: center;
+    }
 }
