@@ -2,7 +2,9 @@
 
 ![logo](https://raw.githubusercontent.com/GrzegorzJendernal/to-do-list/main/images/share.png)
 
-https://grzegorzjendernal.github.io/to-do-list/
+## Demo
+
+[To do list](https://grzegorzjendernal.github.io/to-do-list/)
 
 ##  Description
 
