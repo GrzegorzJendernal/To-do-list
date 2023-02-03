@@ -8,7 +8,7 @@
     const addNewTask = (newTaskContent) => {
         tasks = [
             ...tasks,
-            { content: newTaskContent },
+            { content: newTaskContent, done: false },
         ];
         render();
     };

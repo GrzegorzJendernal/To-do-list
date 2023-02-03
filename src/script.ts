@@ -3,14 +3,21 @@
         console.log("Hej! Życzę miłego przeglądania kodu! :)");
     };
 
-    let tasks: { content: string; done?: boolean }[] = [];
+    interface Task {
+        content: string,
+        done: boolean,
+    }
+
+    type Buttons = NodeListOf<HTMLButtonElement>;
+
+    let tasks: Task[] = [];
 
     let hideDoneTasks = false;
 
     const addNewTask = (newTaskContent: string) => {
         tasks = [
             ...tasks,
-            {content: newTaskContent},
+            {content: newTaskContent, done: false},
         ];
 
         render();
@@ -51,7 +58,7 @@
     };
 
     const bindDoneEvents = () => {
-        const toggleDoneButtons = document.querySelectorAll(".js-taskDone");
+        const toggleDoneButtons: Buttons = document.querySelectorAll(".js-taskDone");
 
         toggleDoneButtons.forEach((toggleDoneButton, index) => {
             toggleDoneButton.addEventListener("click", () => {
@@ -61,7 +68,7 @@
     };
 
     const bindRemoveEvents = () => {
-        const removeButtons = document.querySelectorAll(".js-taskRemove");
+        const removeButtons: Buttons = document.querySelectorAll(".js-taskRemove");
 
         removeButtons.forEach((removeButton, index) => {
             removeButton.addEventListener("click", () => {
@@ -71,8 +78,8 @@
     };
 
     const bindButtonEvents = () => {
-        const hideDone = document.querySelector(".js-hideDoneTasks");
-        const doneAll = document.querySelector(".js-doneAll");
+        const hideDone = <HTMLButtonElement | null>document.querySelector(".js-hideDoneTasks");
+        const doneAll = <HTMLButtonElement | null>document.querySelector(".js-doneAll");
 
         if (hideDone) {
             hideDone.addEventListener("click", toggleHideDone);
@@ -99,7 +106,7 @@
     };
 
     const renderButtons = () => {
-        let htmlButtons = "";
+        let htmlButtons: string = "";
         if (tasks.length > 0) {
             htmlButtons += `
             <button class="main__button js-hideDoneTasks">${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone</button> 
@@ -125,7 +132,7 @@
     const onFormSubmit = (event: Event) => {
         event.preventDefault();
 
-        const inputElement = document.querySelector(".js-newTask") as HTMLInputElement;
+        const inputElement = <HTMLInputElement>document.querySelector(".js-newTask");
         const newTaskContent = inputElement.value.trim();
 
         if (newTaskContent === "") {
