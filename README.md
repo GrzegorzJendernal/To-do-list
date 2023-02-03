@@ -36,4 +36,6 @@ To create the page I used:
 
 4. BEM convention
 
+5. TypeScript
+
 ###  Enjoy using!
