@@ -71,7 +71,8 @@
                 <button class="list__button list__button--remove js-taskRemove">🗑</button>
              </li>`;
         }
-        document.querySelector(".js-tasks").innerHTML = htmlString;
+        const listElement = document.querySelector(".js-tasks");
+        listElement.innerHTML = htmlString;
     };
     const renderButtons = () => {
         let htmlButtons = "";
@@ -81,7 +82,8 @@
             <button class="main__button js-doneAll" ${tasks.every(({ done }) => done) ? "disabled" : ""}>Ukończ wszystkie</button>
             `;
         }
-        document.querySelector(".js-buttons").innerHTML = htmlButtons;
+        const buttonsElement = document.querySelector(".js-buttons");
+        buttonsElement.innerHTML = htmlButtons;
     };
     const render = () => {
         renderTasks();
